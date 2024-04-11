@@ -1,20 +1,13 @@
 server:
   port: 9096
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8998/eureka/
-
 spring:
   application:
     name: Food-Catalogue-Service
+  profiles:
+    active: dev
   main:
     banner-mode: off #turn off spring boot banner
   datasource:
-    url: jdbc:mysql://localhost:3306/foodcataloguedb
-    username: restaurantprjt
-    password: restaurantprjt
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
